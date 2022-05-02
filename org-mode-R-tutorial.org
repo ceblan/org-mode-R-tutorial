@@ -563,7 +563,7 @@ several things to notice.
    the actual org-mode document! Run the following source code block
    to see how it works.
 
-#+begin_src R :results output graphics :file diamonds.png :bg "transparent"
+#+begin_src R :results file graphics :file diamonds.png :bg "transparent"
   library(ggplot2)
   data(diamonds)
   dsmall <-diamonds[sample(nrow(diamonds), 100), ] 
@@ -578,6 +578,9 @@ several things to notice.
   p + opts(plot.background = plot.rrg) + opts(panel.background = panel.rrg)
   
 #+end_src
+
+#+RESULTS:
+[[file:diamonds.png]]
 
 This opens up many opportunities for doing interesting things with R
 within your org-mode documents. If you're reading an exported version,
